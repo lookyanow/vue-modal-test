@@ -1,10 +1,5 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <h1>{{ title }}</h1>
-  <p>
-    <button @click="buttonPressed('New text message')">Button</button>
-  </p>
+  <Modal />
 </template>
 
 <!-- <script>
@@ -19,21 +14,16 @@ export default {
 </script> -->
 
 <script>
+
+import Modal from './components/Modal.vue'
 export default {
   name: 'App',
-
+  components: { Modal },
   data(){
     return {
       title: 'Hello world from Vue'
     }
   },
-
-  methods: {
-
-    buttonPressed(text){
-      this.title = text
-    }
-  }
 
 }
 </script>
