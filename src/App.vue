@@ -1,9 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <h1>{{ title }}</h1>
+  <p>
+    <button @click="buttonPressed('New text message')">Button</button>
+  </p>
 </template>
 
-<script>
+<!-- <script>
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
@@ -11,6 +15,26 @@ export default {
   components: {
     HelloWorld
   }
+}
+</script> -->
+
+<script>
+export default {
+  name: 'App',
+
+  data(){
+    return {
+      title: 'Hello world from Vue'
+    }
+  },
+
+  methods: {
+
+    buttonPressed(text){
+      this.title = text
+    }
+  }
+
 }
 </script>
 
